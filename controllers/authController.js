@@ -25,7 +25,7 @@ const login = async (req, res) => {
     const jwtToken = jwt.sign(
       { uid, email },
       process.env.JWT_SECRET_KEY || 'secret',
-      { expiresIn: '5h' }
+      { expiresIn: 'private information' }
     );
 
     // Enviar el JWT en el header de la respuesta
@@ -33,7 +33,7 @@ const login = async (req, res) => {
 
   } catch (error) {
     console.error("Error verificando el token:", error);
-    return res.status(401).json({ error: 'Token de Firebase inválido' });
+    return res.status(401).json({ error: 'Token inválido' });
   }
 };
 
@@ -46,7 +46,7 @@ const deleteUser = async (req, res) => {
 
   if (!authHeader || !authHeader.startsWith("Bearer ")) {
     console.warn("❌ Token ausente o mal formado");
-    return res.status(400).json({ error: "Token de Firebase no recibido o incorrecto en el header" });
+    return res.status(400).json({ error: "Token no recibido o incorrecto en el header" });
   }
 
   const idToken = authHeader.split(" ")[1];
