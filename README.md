@@ -39,11 +39,12 @@ This public version serves to:
 
 ## 🚀 Tech Stack (in the original full version)
 
-- **Java 19** with **Spring Boot 3**
-- **Spring Web**, **Spring Security**
-- **Firebase Admin SDK**
-- **Google Cloud (Firestore, FCM, Vertex AI)**
-- **Lombok**, **Maven**, **OpenHTMLtoPDF**, etc.
+- **Node.js 20**
+- **Express.js**
+- **Firebase Admin SDK** (Auth & Firestore)
+- **Google Cloud Functions**
+- **FCM (Firebase Cloud Messaging)**
+- **CORS**, **dotenv**, **nodemon**, etc.
 
 ---
 
